@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SSE662_P3;
 
@@ -78,6 +79,15 @@ namespace SSE662_P3_Test
             double expectedOutcome = Math.PI * Math.Pow(5, 2);
 
             Assert.AreEqual(expectedOutcome, Calculate.AreaOfCircle(radius));
+        }
+
+        [TestMethod]
+        public void GetFactorsTest()
+        {
+            double number = 18;
+            List<double> expectedFactors = new List<double>() { 1, 2, 3, 6, 9, 18 };
+
+            Assert.IsTrue(expectedFactors.Except(Calculate.GetFactors(number)).ToArray().Length == 0);    
         }
     }
 }

@@ -40,5 +40,20 @@ namespace SSE662_P3
         {
             return Math.PI * Math.Pow(radius, 2);
         }
+
+        public static List<double> GetFactors(double number)
+        {
+            List<double> factors = new List<double>();
+
+            for (int i = 0; i <= number; i++)
+            {
+                if (number % i == 0)
+                {
+                    factors.Add(i);
+                }
+            }
+
+            return factors;
+        }
     }
 }
