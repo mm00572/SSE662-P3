@@ -23,6 +23,14 @@ namespace SSE662_P3
             set { _lastName = value; }
         }
 
+        private string _position;
+
+        public string Position
+        {
+            get { return _position; }
+            set { _position = value; }
+        }
+
         public Employee(string fName, string lName)
         {
             _firstName = fName;

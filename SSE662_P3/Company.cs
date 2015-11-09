@@ -29,5 +29,11 @@ namespace SSE662_P3
         {
             return _employees.Count;
         }
+
+        public string GetEmployeePosition(Employee key)
+        {
+            return _employees.Where(e => e.FirstName == key.FirstName && 
+                e.LastName == key.LastName).FirstOrDefault().Position;
+        }
     }
 }
